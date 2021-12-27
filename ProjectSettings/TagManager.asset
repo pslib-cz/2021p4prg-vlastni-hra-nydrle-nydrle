@@ -6,6 +6,15 @@ TagManager:
   tags:
   - movable
   - HideOnPause
+  - Obstacle
+  - SpeedUp
+  - SpeedDown
+  - GravityUp
+  - GravityDown
+  - GameOver
+  - Startup
+  - ObstacleContainer
+  - Bonuses
   layers:
   - Default
   - TransparentFX
