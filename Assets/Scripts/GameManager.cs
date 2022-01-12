@@ -39,6 +39,10 @@ public class GameManager : MonoBehaviour
             {
                 g.SetActive(true);
             }
+            foreach (GameObject g in player)
+            {
+                g.SetActive(true);
+            }
         }
         else
         {
@@ -51,8 +55,15 @@ public class GameManager : MonoBehaviour
 
         if (isGameOver)
         {
+            isPlaying = false;
             foreach(GameObject g in gameOverObjects)
             {
+                g.SetActive(true);
+            }
+            
+            
+            foreach(GameObject g in player) {
+                g.SetActive(false);
                 g.SetActive(true);
             }
         }
@@ -93,6 +104,7 @@ public class GameManager : MonoBehaviour
         }
         foreach(GameObject g in player) {
             g.transform.position = BirdController.defaultBirdPos;
+            BirdController.birdBody.AddForce(-Vector3.up);
         }
         foreach(GameObject g in obstacles) {
             g.transform.position = ObstacleController.defaultObstaclePos;

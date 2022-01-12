@@ -8,7 +8,7 @@ public class BirdController : MonoBehaviour
     SpriteRenderer birdImage;
     public Sprite[] birdImages;
     public static bool imageChange = false;
-    public float forceValue = 100f;
+    public static float forceValue = 100f;
     public static Vector3 defaultBirdPos;
     // Start is called before the first frame update
     void Start()
